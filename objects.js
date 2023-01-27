@@ -69,53 +69,70 @@
 // pet.eat()
 // pet.drink()
 
-// // Activity 5
-// const coffeeShop = {
-//     branch: "melbrucks",
-//     drinks: ["coffee","tea","water"],
-//     drinkPrices: [3,3,0],
+// Activity 5
+const coffeeShop = {
+    branch: "melbrucks",
+    drinks: ["coffee","tea","water"],
+    drinkPrices: [3,3,0],
 
-//     food: ["burger","toast","avocado"],
-//     foodPrices: [5,2,10],
+    food: ["burger","toast","avocado"],
+    foodPrices: [5,2,10],
     
-//     foodOrdered(foodArray){
-//         let total = 0
-//         for(let i=0;i<foodArray.length;i++){
-//             if(foodArray[i] == 1){
-//                 total += this.foodPrices[0]
-//                 console.log(`burger: £${this.foodPrices[0]}`)
-//             }
-//             if(foodArray[i] == 2){
-//                 total += this.foodPrices[1]
-//                 console.log(`toast: £${this.foodPrices[1]}`)
-//             }
-//             if(foodArray[i] == 3){
-//                 total += this.foodPrices[2]
-//                 console.log(`avocado: £${this.foodPrices[2]}`)
-//             }
-//         }
-//         console.log(`food total: £${total}`)
-//     },
+    // takes an array of each item from the food menu (1,2,3)
+    // logs cost of each item ordered and total amount of the order
+    foodOrdered(foodArray){
+        let total = 0
+        for(let i=0;i<foodArray.length;i++){
+            if(foodArray[i] == 1){
+                total += this.foodPrices[0]
+                console.log(`burger: £${this.foodPrices[0]}`)
+            }
+            if(foodArray[i] == 2){
+                total += this.foodPrices[1]
+                console.log(`toast: £${this.foodPrices[1]}`)
+            }
+            if(foodArray[i] == 3){
+                total += this.foodPrices[2]
+                console.log(`avocado: £${this.foodPrices[2]}`)
+            }
+        }
+        console.log(`food total: £${total}`)
+    },
 
-//     drinksOrdered(drinkArray) {
-//         let total2 = 0
-//         for(let j=0;j<drinkArray.length;j++){
-//             if(drinkArray[j] == 1){
-//                 total2 += this.drinkPrices[0]
-//                 console.log(`coffe: £${this.drinkPrices[0]}`)
-//             }
-//             if(drinkArray[j] == 2){
-//                 total2 += this.drinkPrices[1]
-//                 console.log(`tea: £${this.drinkPrices[1]}`)
-//             }
-//             if(drinkArray[j] == 3){
-//                 total2 += this.drinkPrices[2]
-//                 console.log(`water: £${this.drinkPrices[2]}`)
-//             }
-//         }
-//         console.log(`drinks total: £${total2}`)
-//     },
+    // takes an array of each item from the drinks menu (1,2,3)
+    // logs cost of each item ordered and total amount of the order
+    drinksOrdered(drinkArray) {
+        let total2 = 0
+        for(let j=0;j<drinkArray.length;j++){
+            if(drinkArray[j] == 1){
+                total2 += this.drinkPrices[0]
+                console.log(`coffe: £${this.drinkPrices[0]}`)
+            }
+            if(drinkArray[j] == 2){
+                total2 += this.drinkPrices[1]
+                console.log(`tea: £${this.drinkPrices[1]}`)
+            }
+            if(drinkArray[j] == 3){
+                total2 += this.drinkPrices[2]
+                console.log(`water: £${this.drinkPrices[2]}`)
+            }
+        }
+        console.log(`drinks total: £${total2}`)
+    },
+    // logs the food and drink arrays with prices
+    postMenu(){
+        console.log("Food Menu:")
+        for(let k = 0; k < this.food.length; k++){
+            console.log(`${k+1}: ${this.food[k]} £${this.foodPrices[k]}`)
+        }
+        console.log("Drinks Menu:")
+        for(let l = 0; l < this.drinks.length; l++){
+            console.log(`${l+1}: ${this.drinks[l]} £${this.drinkPrices[l]}`)
+        }
 
-// }
-// coffeeShop.foodOrdered([1,1,2])
-// coffeeShop.drinksOrdered([1,1,2,3,3,3,1,1,1,3])
+    }
+}
+coffeeShop.postMenu();
+//coffeeShop.foodOrdered([1,1,2]);
+//coffeeShop.drinksOrdered([1,1,2,3,3]);
+
