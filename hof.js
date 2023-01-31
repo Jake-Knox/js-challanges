@@ -2,13 +2,16 @@
 
 // Acvtivity 1
 
+// // function to log something
 // const sayHello = () => {
 //     console.log("hello from code nation")
 // }
+
+// // function which takes another func as a parameter
 // const speak = (loopNum, fn) => {
 //     for(let i=0; i<loopNum;i++)
 //     {
-//         fn();
+//         fn(); // the call to the other function
 //     }
 // }
 // speak(5,sayHello);
